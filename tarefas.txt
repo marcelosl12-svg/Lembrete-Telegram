@@ -1,3 +1,5 @@
 Projetar bancada da Bárbara
 Projetar nicho da cozinha
 Concluir projeto da copa
+
+configurar para editar tarefas direto pelo Telegram

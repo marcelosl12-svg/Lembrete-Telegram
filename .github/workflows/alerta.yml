@@ -2,7 +2,7 @@ name: Alerta Telegram Diário
 
 on:
   schedule:
-    - cron: '0 1 * * *'   # 22h horário de Brasília (UTC-3)
+    - cron: '0 1 * * *'   # 07h horário de Brasília (UTC-3)
   workflow_dispatch:
 
 jobs:

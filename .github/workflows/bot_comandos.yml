@@ -1,0 +1,27 @@
+name: Bot Telegram - Comandos
+
+on:
+  workflow_dispatch:
+    inputs:
+      text:
+        description: "Mensagem do Telegram"
+        required: true
+
+jobs:
+  executar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - run: pip install requests
+
+      - name: Executar comando
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+          TEXT: ${{ github.event.inputs.text }}
+        run: python bot_comandos.py
